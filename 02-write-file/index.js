@@ -3,7 +3,7 @@ const { stdin, stdout } = process
 const path = require("path")
 const pathName = path.join(__dirname, "/text.txt")
 
-stdout.write("Please, type tour text here:\n")
+stdout.write("Please, type your text here:\n")
 
 stdin.on("data", (data) => {
   const string = data.toString()
@@ -15,4 +15,4 @@ stdin.on("data", (data) => {
 })
 
 process.on("SIGINT", () => process.exit())
-process.on("exit", () => stdout.write("Goodby!"))
+process.on("exit", () => stdout.write("Goodbye!"))
